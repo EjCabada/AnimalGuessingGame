@@ -5,6 +5,7 @@
 
 body {
     background-color: dodgerblue;
+    width: 100vw;
 
 }
 
@@ -27,10 +28,14 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
     animation: titlebounce 1.8s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    ;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 @keyframes titlebounce {
@@ -53,11 +58,13 @@ main {
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+    flex-shrink: 3;
 
 }
 
 h1 {
     font-size: 3.5em;
+    text-align: center;
 }
 
 .button {
@@ -81,6 +88,10 @@ h1 {
     padding: 1em;
 }
 
+#guessPart {
+    flex-shrink: 3;
+}
+
 #hints {
     background-color: #F5F5F5;
     min-height: 1em;
@@ -92,6 +103,7 @@ h1 {
     text-align: left;
     color: #383838;
     font-size: .8em;
+    flex-shrink: 3;
 }
 
 footer {
@@ -100,4 +112,44 @@ footer {
     position: fixed;
     width: 100vw;
     bottom: 0px;
+}
+
+@media (max-width: 1500px) {
+    * {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .title {
+        margin: 0 auto;
+        width: 60vw;
+    }
+
+    #contentBox {
+        margin-top: 3em;
+    }
+}
+
+
+@media (max-width: 800px) {
+    * {
+        font-size: .9em;
+    }
+
+    h1 {
+        font-size: .8em;
+        text-align: center;
+    }
+
+    .title {
+        margin: 0 auto;
+        width: 60vw;
+    }
+
+    #contentBox {
+        margin-top: 4em;
+    }
 }
