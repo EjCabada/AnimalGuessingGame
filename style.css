@@ -9,6 +9,11 @@ body {
 
 }
 
+#counter {
+    text-align: right;
+    padding: .5em 1em;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -104,6 +109,11 @@ h1 {
     color: #383838;
     font-size: .8em;
     flex-shrink: 3;
+}
+
+#feedbackArea {
+    color: red;
+    font-size: .7em;
 }
 
 footer {

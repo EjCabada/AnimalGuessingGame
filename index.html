@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>3
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div><p id="counter">Score</p></div>
     <main>
     <div class="title"><h1>Animal Guessing Game!!!</h1></div>
     <div id="contentBox">
@@ -19,6 +20,7 @@
                 <label for="guess">Enter Your Guess Here:</label>
                 <br>
                 <input id="animalInput" class="inputClass" placeholder="ex: Penguin" type="text"  name="guess">
+                <p id="feedbackArea"></p>
             </div>
         <br>
         <input id=reset class="button" name="guess" type="reset" value="Reset"/>
