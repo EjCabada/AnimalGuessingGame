@@ -43,7 +43,7 @@ let theAnimal = animals[Math.floor(Math.random() * 30)]
 
 
 //Start of the Game Parameters
-alert(`this is the animal: ${theAnimal}`)
+// alert(`this is the animal: ${theAnimal}`)
 let score = 000
 scoreCounter.innerHTML = `Your Score is: 000`
 
@@ -51,22 +51,49 @@ scoreCounter.innerHTML = `Your Score is: 000`
 
 
 //Submit button events
-submit.addEventListener('click', function () {
+input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && input.value != '') {
+      playGame();
+    }
+  });
+
+submit.addEventListener('click', playGame = () => {
 
     if (input.value === theAnimal) {
         alert('You Win!!!!!')
         input.value = '';
         allHints.forEach(hint => hint.remove());
         hintsList.innerHTML = '';
-        score = score + 100
+        score += 100
         scoreCounter.innerHTML = `Your Score is: ${score}`
         feedbackText.innerText = ''
         theAnimal = animals[Math.floor(Math.random() * 25)]
-        alert(`this is the animal: ${theAnimal}`)
+        // alert(`this is the animal: ${theAnimal}`)
 
     }
+
+    // debug
+    if (input.value === 'Debug') {
+    input.value = '';
+    feedbackText.innerText = ''
+    alert(`DEBUG MENU:
+   1. type 'Answer' for answer
+   2. type 'Reset' for manual reset`)
+}
+
+    let explain = () => {
+    alert(`this is the answer ${theAnimal}`);
+};
+
+    if (input.value === 'Answer') {
+    input.value = '';
+    feedbackText.innerText = '';
+    setTimeout(explain, 1000);
+}
+
+
     else {
-        if (hintsList.children.length <= 6) {
+        if (hintsList.children.length <= 6 && input.value != 'Answer' && input.value != 'Debug' && input.value != 'Reset' && input.value != '') {
             const hint = document.createElement('li');
             hint.innerText = 'this is a hint';
             hintsList.appendChild(hint);
@@ -99,7 +126,7 @@ const randAnimalReset = () => {
     score = 000
     scoreCounter.innerHTML = `Your Score is: 000`
     theAnimal = animals[Math.floor(Math.random() * 25)]
-    alert(`this is the animal: ${theAnimal}`)
+    // alert(`this is the animal: ${theAnimal}`)
     feedbackText.innerText = ''
 }
 
@@ -142,3 +169,6 @@ const hintsFunction = () => {
         // giveFeedback.style.color = 'red';
         // giveFeedback.style.fontSize = '.4em'
         // guessInput.appendChild(giveFeedback);
+
+
+

@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>3
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animal Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div><p id="counter">Score</p></div>
     <main>
-    <div class="title"><h1>Animal Guessing Game!!!</h1></div>
-    <div id="contentBox">
+      <div class="title"><h1>Animal Guessing Game!!!</h1></div>
+      <div id="contentBox">
         <div id="guessPart">
-            <div id="guessInput">
-                <label for="guess">Enter Your Guess Here:</label>
-                <br>
-                <input id="animalInput" class="inputClass" placeholder="ex: Penguin" type="text"  name="guess">
-                <p id="feedbackArea"></p>
-            </div>
-        <br>
-        <input id=reset class="button" name="guess" type="reset" value="Reset"/>
-        <input id=submit class="button" name="guess" type="submit" value="Submit"/>
-    </div>
-    <div id="hints">
-     <p id="hintsText">Hints will apear here as you guess! <br> First letter must be capitalized</p>
-     <ul id="hintsList"></ul>
-    </div>
-    </div>
-</main>
-    
-    <footer>Game Created By EJC &copy 2023 </footer>
+          <div id="guessInput">
+            <label for="guess">Enter Your Guess Here:</label>
+            <br />
+            <input
+              id="animalInput"
+              class="inputClass"
+              placeholder="ex: Penguin"
+              type="text"
+              name="guess"
+            />
+            <p id="feedbackArea"></p>
+          </div>
+          <br />
+          <input
+            id="reset"
+            class="button"
+            name="guess"
+            type="reset"
+            value="Reset"
+          />
+          <input
+            id="submit"
+            class="button"
+            name="guess"
+            type="submit"
+            value="Submit"
+          />
+        </div>
+        <div id="hints">
+          <p id="hintsText">
+            Hints will apear here as you guess! <br />
+            First letter must be capitalized
+          </p>
+          <ul id="hintsList"></ul>
+        </div>
+      </div>
+    </main>
 
-
+    <footer>Game Created By EJC &copy 2023 v(3.1)</footer>
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
