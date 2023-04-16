@@ -119,7 +119,7 @@ h1 {
 footer {
     background-color: rgb(100, 167, 0);
     padding: 2em;
-    position: fixed;
+    position: absolute;
     width: 100vw;
     bottom: 0px;
 }
