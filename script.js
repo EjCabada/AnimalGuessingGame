@@ -87,10 +87,6 @@ reset.addEventListener('click', function () {
     randAnimalReset()
 });
 
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////
 //Reset counter and give new animal
 const randAnimalReset = () => {
