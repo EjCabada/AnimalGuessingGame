@@ -30,7 +30,7 @@ input.addEventListener('keydown', function(e) {
 
 submit.addEventListener('click', playGame = () => {
 
-    if (input.value === theAnimal) {
+    if (input.value.toLowerCase() === theAnimal) {
         alert('You Win!!!!!')
         input.value = '';
         allHints.forEach(hint => hint.remove());
@@ -44,23 +44,19 @@ submit.addEventListener('click', playGame = () => {
     }
 
     // debug
-    if (input.value === 'Debug') {
-    input.value = '';
-    feedbackText.innerText = ''
-    alert(`DEBUG MENU:
-   1. type 'Answer' for answer
-   2. type 'Reset' for manual reset`)
-}
+    if (input.value.toLowerCase === 'Debug') {
+        input.value = '';
+        feedbackText.innerText = ''
+        alert(`DEBUG MENU:
+        1. type 'Answer' for answer
+        2. type 'Reset' for manual reset`)
+    }
 
-    let explain = () => {
-    alert(`this is the answer ${theAnimal}`);
-};
-
-    if (input.value === 'Answer') {
-    input.value = '';
-    feedbackText.innerText = '';
-    setTimeout(explain, 1000);
-}
+    if (input.value.toLowerCase() === 'Answer') {
+        input.value = '';
+        feedbackText.innerText = '';
+        setTimeout( alert(`this is the answer ${theAnimal}`), 1000);
+    }
 
 
     else {
@@ -98,29 +94,16 @@ const randAnimalReset = () => {
 }
 
 const hintsFunction = () => {
-    let hint1 = document.querySelectorAll('.hintInText')[0];
-    hint1.innerHTML = `The first letter of the animal's name ${theAnimal.charAt(0)}`;
-    let hint2 = document.querySelectorAll('.hintInText')[1];
-    if (["Whale", "Dolphin", "Shark", "Otter", "Seal"].includes(theAnimal)) {
-        hint2.innerText = 'This animal lives in the ocean';
-    } else {
-        hint2.innerText = 'This animal doesn\'t live in the ocean';
-    }
-    let hint3 = document.querySelectorAll('.hintInText')[2];
-    if (theAnimal == "Pigeon" || theAnimal == "Parrot" || theAnimal == "Eagle" || theAnimal == "Woodpecker" || theAnimal == "Crow") {
-        hint3.innerText = 'This animal is a bird';
-    } else {
-        hint3.innerText = 'This animal is not a bird';
-    }
-    let hint4 = document.querySelectorAll('.hintInText')[3];
-    hint4.innerHTML = `The second letter of the animal's name ${theAnimal.charAt(1)}`;
-    let hint5 = document.querySelectorAll('.hintInText')[4];
-    hint5.innerHTML = `The name of the animal is ${theAnimal.length} leters long`;
-    let hint6 = document.querySelectorAll('.hintInText')[5];
-    hint6.innerHTML = `The third letter of the animal's name ${theAnimal.charAt(2)}`;
-    let hint7 = document.querySelectorAll('.hintInText')[6];
-    hint7.innerHTML = `Sorry no more hints ¯\\_(ツ)_/¯`;
-}
+    const hints = document.querySelectorAll('.hintInText');
+
+    hints[0].innerHTML = `The first letter of the animal's name is ${theAnimal.name.charAt(0)}`;
+    hints[1].innerText = (theAnimal.habitat === "water") ? 'This animal lives in the water' : 'This animal doesn\'t live in the water';
+    hints[2].innerText = (theAnimal.habitat === "air") ? 'This animal can fly' : 'This animal cannot fly';
+    hints[3].innerHTML = `The second letter of the animal's name is ${theAnimal.name.charAt(1)}`;
+    hints[4].innerHTML = `Random fact: ${theAnimal.fact}`; 
+    hints[5].innerHTML = `Another random fact: ${theAnimal.fact2}`; 
+    hints[6].innerHTML = `Sorry, no more hints ¯\\_(ツ)_/¯`;
+};
 
 
 
