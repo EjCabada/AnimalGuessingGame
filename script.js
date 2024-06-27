@@ -1,3 +1,5 @@
+import { animals } from "animals.js";
+
 // Main variables
 const input = document.querySelector('#animalInput');
 const reset = document.querySelector('#reset');
@@ -6,38 +8,7 @@ const allHints = document.querySelectorAll('.hintInText');
 const hintsList = document.querySelector('#hintsList');
 const scoreCounter = document.querySelector('#counter');
 const feedbackText = document.querySelector('#feedbackArea')
-const animals = [
-    "Lion",
-    "Tiger",
-    "Elephant",
-    "Giraffe",
-    "Kangaroo",
-    "Panda",
-    "Gorilla",
-    "Monkey",
-    "Hippopotamus",
-    "Bear",
-    "Zebra",
-    "Raccoon",
-    "Squirrel",
-    "Deer",
-    "Fox",
-    "Wolf",
-    "Leopard",
-    "Cheetah",
-    "Jaguar",
-    "Puma",
-    "Otter",
-    "Seal",
-    "Whale",
-    "Dolphin",
-    "Shark",
-    "Pigeon",
-    "Parrot",
-    "Eagle",
-    "Woodpecker",
-    "Crow"
-];
+
 let theAnimal = animals[Math.floor(Math.random() * 30)]
 
 
