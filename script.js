@@ -1,4 +1,4 @@
-import { animals } from "animals.js";
+import { animals } from "./animals.js";
 
 // Main variables
 const input = document.querySelector('#animalInput');
@@ -9,13 +9,13 @@ const hintsList = document.querySelector('#hintsList');
 const scoreCounter = document.querySelector('#counter');
 const feedbackText = document.querySelector('#feedbackArea')
 
-let theAnimal = animals[Math.floor(Math.random() * 30)]
+let theAnimal = animals[Math.floor(Math.random() * animals.length)]
 
 
 
 //Start of the Game Parameters
 // alert(`this is the animal: ${theAnimal}`)
-let score = 000
+let score = 0;
 scoreCounter.innerHTML = `Your Score is: 000`
 
 
@@ -43,7 +43,7 @@ submit.addEventListener('click', playGame = () => {
 
     }
 
-    // debug
+    //debug_menu
     if (input.value.toLowerCase === 'Debug') {
         input.value = '';
         feedbackText.innerText = ''
@@ -86,7 +86,7 @@ reset.addEventListener('click', function () {
 //////////////////////////////////////////////////////////////////////////////////////
 //Reset counter and give new animal
 const randAnimalReset = () => {
-    score = 000
+    score = 0;
     scoreCounter.innerHTML = `Your Score is: 000`
     theAnimal = animals[Math.floor(Math.random() * 25)]
     // alert(`this is the animal: ${theAnimal}`)

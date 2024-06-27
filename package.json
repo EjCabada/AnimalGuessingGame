@@ -1,0 +1,11 @@
+{
+  "name": "animalguessinggame",
+  "version": "1.0.0",
+  "description": "animal guessing game to learn hs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EJC55",
+  "license": "ISC"
+}
